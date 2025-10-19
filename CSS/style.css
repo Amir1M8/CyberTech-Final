@@ -3,6 +3,18 @@ body {
     font-family: sans-serif;
 }
 
+.website-header {
+    position: absolute;
+    width: 1456px;
+    height: 50px;
+    top: 6.4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #141510c6;
+    border-radius: 0px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
 
 .image-wrapper {
     position: relative;
@@ -19,7 +31,6 @@ body {
     transform: scale(1.05);
 }
 
-
 header {
     position: absolute;
     top: 50%;
@@ -30,4 +41,103 @@ header {
     border-radius: 10px;
     text-align: center;
     backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.35rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 480px){
+    header { padding: 14px 18px; }
+    header h1 { font-size: 1.1rem; }
+    header p { font-size: 0.9rem; }
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 280px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: #111;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+}
+
+.lab-section {
+    background-color: #e8e8e8;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.lab-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.lab-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+}
+
+
+.header-options {
+    list-style-type: none; 
+    color: #f0f0f0;
+    font-size: 24px;
+}
+
+nav ul {
+    direction: ltr;
+    list-style-type: none; /* Remove bullets */
+    padding: 5px;
+    margin: 0;
+    margin-left: 340px;
+    display: flex; /* Horizontal layout */
+    gap: 50px; /* Space between links */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+    border-radius: 4px;
 }
