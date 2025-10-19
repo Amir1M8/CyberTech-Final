@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login-filed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.618);
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: right;
+    backdrop-filter: blur(5px);
+}
+
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.4);
+    height: 425px;
+    width: 360px;   
+    transform-origin: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 50px;
+}
+
+.title {
+    font-size: 24px;
+    font-family: Albert Sans;
+    margin: 10px 0 30px 0;
+    text-align: center;
+    font-weight: 500;   
+}
+
+.form {
+    width: 100%;
+    flex-direction: column;
+    display: flex;   
+    gap: 18px;
+}
+
+.input {
+    box-shadow: rgba(143, 143, 143, 0.5) 0px 0px 30px 0px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-family: Albert Sans;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    transition: all 1s ease;
+    margin: 3px;
+    font-size: 15px;
+}
+
+.input:focus {
+    transform: translateY(-5px);
+    border: none;   
+}
+
+.forgot {
+    text-decoration-color: rgb(79, 79, 79);
+    color: rgb(79, 79, 79);
+    text-align: start;
+    margin-top: -4px;
+}
+
+.forgot-page {
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 5px;
+    font-weight: 500;
+    font-family: Albert Sans;
+}
+
+.forgot-page:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    font-family: Albert Sans;
+    border-radius: 30px;
+    margin-top: 100px;
+    outline: 0px !important;
+    border: 0px !important;
+    background-color: #3b3d32;
+    padding: 12px;
+    color: white;
+    cursor: pointer; 
+    font-size: 18px;
+    transition: all 0.75s ease;
+    box-shadow: rgba(143, 143, 143, 0.5) 8px 0px 36px 0px, rgba(143, 143, 143, 0.5) 7px 7px 7px;
+}
+
+.login-button:hover {
+    background-color: #4e514c;
+    transform: translateY(-3px);
+    
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+/* .google-login-button {
+    margin-top: 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 13px 25px;
+    box-shadow: rgba(143, 143, 143, 0.5) 8px 0px 36px 0px, rgba(143, 143, 143, 0.5) 7px 7px 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Albert Sans;
+    font-size: 13px;
+    gap: 5px;
+    border: 2px solid #747474;
+    margin-top: 20px;
+    transition: all 0.75s ease;
+    border: none;
+}
+
+.google-login-button:hover {   
+    transform: translateY(-3px); 
+    border: none;
+    box-shadow: rgba(143, 143, 143, 0.5) 8px 0px 36px 0px, rgba(143, 143, 143, 0.5) 7px 7px 7px;
+}
+
+.google-icon {
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+
+.login-with-another {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+} */
+
+.signup {
+    text-align: start;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Albert Sans;
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.signup-page {
+    cursor: pointer; 
+    font-size: 15px;
+    color: teal;
+    font-weight: 500;
+    font-family: Albert Sans;
+    transition: all 1s easy;
+}
+
+.signup-page:hover {
+    color: rgb(0, 83, 83);
+    text-decoration: underline;
+}

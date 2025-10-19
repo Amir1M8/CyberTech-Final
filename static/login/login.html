@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/login.css">
+    <title>Log in</title>
+    <style>
+        .image-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;    
+            height: 100vh;   
+            overflow: hidden;
+            z-index: -1;     
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(6px);
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.85);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-wrapper">
+        <img src="../../Assets/Images/image2.jpg" alt="login-background">
+    </div>
+
+    <div class="card">
+        <p id="title" class="title"><b>Welcome to CyberTech</b></p>
+        <form class="form">
+            <input type="email" placeholder="Email" class="input">
+            <input type="password" placeholder="Password" class="input">
+        </form>
+        <button class="login-button">Log in</button>                             
+        
+        <p class="signup">
+            Don't have an account?  
+            <span class="signup-page"><a href="./register.html">Sign up</a></span>
+        </p>
+        <p class="forgot">
+            <span class="forgot-page">Forgot Password?</span>
+        </p>
+    </div>
+</body>
+</html>
