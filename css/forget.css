@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
 }
 
-.login-filed {
+.forget-filed {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,9 +25,13 @@ body {
     transform-origin: center;
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    margin-right: 50px;
+    /* right: 0; */
+    /* transform: translateY(-50%); */
+    /* margin-right: 50px; */
+    /* Set Field Center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
 .title {
@@ -83,11 +87,11 @@ body {
     text-decoration: underline;
 }
 
-.login-button {
+.forget-button {
     width: 100%;
     font-family: Albert Sans;
     border-radius: 30px;
-    margin-top: 100px;
+    margin-top: 150px;
     outline: 0px !important;
     border: 0px !important;
     background-color: #3b3d32;
@@ -99,7 +103,7 @@ body {
     box-shadow: rgba(143, 143, 143, 0.5) 8px 0px 36px 0px, rgba(143, 143, 143, 0.5) 7px 7px 7px;
 }
 
-.login-button:hover {
+.forget-button:hover {
     background-color: #4e514c;
     transform: translateY(-3px);
     
@@ -113,44 +117,6 @@ body {
     margin-top: 20px;
     gap: 15px;
 }
-
-/* .google-login-button {
-    margin-top: 15px;
-    border-radius: 30px;
-    font-weight: 600;
-    box-sizing: border-box;
-    padding: 13px 25px;
-    box-shadow: rgba(143, 143, 143, 0.5) 8px 0px 36px 0px, rgba(143, 143, 143, 0.5) 7px 7px 7px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Albert Sans;
-    font-size: 13px;
-    gap: 5px;
-    border: 2px solid #747474;
-    margin-top: 20px;
-    transition: all 0.75s ease;
-    border: none;
-}
-
-.google-login-button:hover {   
-    transform: translateY(-3px); 
-    border: none;
-    box-shadow: rgba(143, 143, 143, 0.5) 8px 0px 36px 0px, rgba(143, 143, 143, 0.5) 7px 7px 7px;
-}
-
-.google-icon {
-    font-size: 18px;
-    margin-bottom: 1px;
-}
-
-.login-with-another {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-} */
 
 .signup {
     text-align: start;
@@ -171,6 +137,28 @@ body {
 }
 
 .signup-page:hover {
+    color: rgb(0, 83, 83);
+    text-decoration: underline;
+}
+.signin {
+    text-align: start;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Albert Sans;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.signin-page {
+    cursor: pointer; 
+    font-size: 15px;
+    color: teal;
+    font-weight: 500;
+    font-family: Albert Sans;
+    transition: all 1s easy;
+}
+
+.signin-page:hover {
     color: rgb(0, 83, 83);
     text-decoration: underline;
 }
