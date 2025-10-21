@@ -90,7 +90,7 @@ body {
     width: 100%;
     font-family: Albert Sans;
     border-radius: 30px;
-    margin-top: 70px;
+    margin-top: 50px;
     outline: 0px !important;
     border: 0px !important;
     background-color: #3b3d32;
@@ -136,6 +136,29 @@ body {
 }
 
 .signup-page:hover {
+    color: rgb(0, 83, 83);
+    text-decoration: underline;
+}
+
+.home {
+    text-align: start;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Albert Sans;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.home-page {
+    cursor: pointer; 
+    font-size: 15px;
+    color: teal;
+    font-weight: 500;
+    font-family: Albert Sans;
+    transition: all 1s easy;
+}
+
+.home-page:hover {
     color: rgb(0, 83, 83);
     text-decoration: underline;
 }

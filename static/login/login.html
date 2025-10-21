@@ -29,6 +29,7 @@
             transform: scale(1.05);
         }
     </style>
+    <script src="../../js/functions.js"></script>
 </head>
 <body>
     <div class="image-wrapper">
@@ -45,10 +46,14 @@
         
         <p class="signup">
             Don't have an account?  
-            <span class="signup-page"><a href="./register.html">Sign up</a></span>
+            <span class="signup-page" onclick="redirect('./register.html')">Sign up</span>
         </p>
         <p class="forgot">
-            <span class="forgot-page"><a href="./forget.html">Forgot Password?</a></span>
+            <span class="forgot-page" onclick="redirect('./forget.html')">Forgot Password?</span>
+        </p>
+        <p class="home">
+            Back to 
+            <span class="home-page" onclick="redirect('../../index.html')">Home</span>
         </p>
     </div>
 </body>
