@@ -1,0 +1,38 @@
+/* ===== Footer Section ===== */
+.footer {
+  direction: ltr;
+  background-color: #e8e8e8;           /* رنگ پس‌زمینه تیره */
+  color: #202020;                      /* رنگ متن */
+  text-align: center;                  /* وسط‌چین کردن متن */
+  padding: 30px 15px;                  /* فاصله داخلی */
+  margin-top: 60px;                    /* فاصله از بالا */
+  border-top: 2px solid #e8e8e8;       /* خط بالای فوتر */
+  font-family: Albert Sans;    /* فونت فارسی مناسب */
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer .footer-links {
+  list-style: none;                    /* حذف نقطه‌گذاری لیست */
+  padding: 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer .footer-links li a {
+  color: #202020;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links li a:hover {
+  color: #202020;                      /* رنگ لینک هنگام هاور */
+}

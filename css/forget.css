@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    direction: ltr;
+    font-family: Albert Sans;
 }
 
 .forget-filed {
