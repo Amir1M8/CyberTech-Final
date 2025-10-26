@@ -36,7 +36,7 @@ body {
     border-radius: 12px;
     padding: 30px 20px;
     text-align: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
     color: #111;
