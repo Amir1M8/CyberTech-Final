@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/about.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../../css/about.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <script src="../../js/functions.js"></script>
   <title>CyberTech - About</title>
-  <link rel="shortcut icon" href="../assets/images/Logo.ico"/>
+  <link rel="shortcut icon" href="../../assets/images/Logo.ico"/>
 </head>
 <body>
   <!-- Header -->
   <div class="image-wrapper">
-    <img src="../assets/images/image7.jpg" alt="Background" />
+    <img src="../../assets/images/image7.jpg" alt="Background" />
     <header>
       <h1>About Developer</h1>
       <p>We are the CyberTech programming team, managed by the group's senior leader. <br>With 5 years of experience, we are skilled in cybersecurity, web development, application development, as well as backend and frontend technologies.</p>
@@ -21,12 +22,14 @@
   <header class="website-header">
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="#Machines">Machines & Labs</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#machines">Machines & Labs</a></li>
           <li><a href="./login/login.html">Login</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <hr>
+          <li onclick="redirect('../FA/index.html')" class="ChangeLang">FA</li>
         </ul>
       </nav>
   </header>
@@ -42,14 +45,14 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <img src="../assets/images/Logo.ico" width="40px">
+    <img src="../../assets/images/Logo.ico" width="40px">
     <p>© 2025 CyberTech. All rights reserved.</p>
     <p>Developed by CyberTech Team</p>
     <ul class="footer-links">
       <li><a href="./index.html">Home</a></li>
-      <li><a href="./static/about.html">About</a></li>
-      <li><a href="./static/contact.html">Contact</a></li>
-      <li><a href="./static/services.html">Services</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#services">Services</a></li>
     </ul>
   </footer>
 </body>

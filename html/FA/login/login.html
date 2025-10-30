@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/login.css">
+    <title>ورود</title>
+    <link rel="shortcut icon" href="../../../assets/images/Logo.ico"/>
+    <style>
+        .image-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;    
+            height: 100vh;   
+            overflow: hidden;
+            z-index: -1;     
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(6px);
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.85);
+            transform: scale(1.05);
+        }
+    </style>
+    <script src="../../../js/functions.js"></script>
+</head>
+<body>
+    <div class="image-wrapper">
+        <img src="../../../assets/images/image4.jpg" alt="login-background">
+    </div>
+
+    <div class="card">
+        <p id="title" class="title"><b>به آکادمی ما خوش آمدید</b></p>
+        <form class="form">
+            <input type="email" placeholder="ایمیل" class="input">
+            <input type="password" placeholder="رمز عبور" class="input">
+        </form>
+        <button class="login-button">ورود</button>                             
+        
+        <p class="home">
+            برگشت به
+            <span class="home-page" onclick="redirect('../index.html')">خانه</span>
+        </p>
+        <p class="signup">
+            حساب کاربری ندارید؟  
+            <span class="signup-page" onclick="redirect('./register.html')">ثبت نام</span>
+        </p>
+        <p class="forgot">
+            <span class="forgot-page" onclick="redirect('./forget.html')">فراموشی رمز عبور</span>
+        </p>
+    </div>
+    <script>
+        document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
+        document.getElementsByClassName("login-button")[0].style = "margin-top: 10%;";
+    </script>
+</body>
+</html>

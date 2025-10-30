@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/forget.css">
+    <title>برگرداندن رمز عبور</title>
+    <link rel="shortcut icon" href="../../../assets/images/Logo.ico"/>
+    <script src="../../../js/functions.js"></script>
+    <style>
+        .image-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;    
+            height: 100vh;   
+            overflow: hidden;
+            z-index: -1;     
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(6px);
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.85);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-wrapper">
+        <img src="../../../assets/images/image4.jpg" alt="forget-background">
+    </div>
+
+    <div class="card">
+        <p id="title" class="title"><b>به آکادمی ما خوش آمدید</b></p>
+        <form class="form">
+            <input type="recovery-info" placeholder="ایمیل یا شماره تلفن را وارد کنید" class="input">
+        </form>
+        <button class="forget-button">ادامه</button>                             
+        
+        <p class="signup">
+            حساب کاربری ندارید؟
+            <span class="signup-page" onclick="redirect('./register.html')">ثبت نام</span>
+        </p>
+        <p class="signin">
+            حساب کاربری دارید؟
+            <span class="signin-page" onclick="redirect('./login.html')">ورود</span>
+        </p>
+        <p class="home">
+            برگشت به
+            <span class="home-page" onclick="redirect('../index.html')">خانه</span>
+        </p>
+    </div>
+
+    <script>
+        document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
+        document.getElementsByClassName("forget-button")[0].style = "margin-top: 30%;";
+    </script>
+</body>
+</html>
