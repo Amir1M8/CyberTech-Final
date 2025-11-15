@@ -19,21 +19,10 @@
       <p>ما اعضای تیم آکادمی تکنولوژی های امنیت سایبری هستیم، ما در زمینه امنیت و برنامه نویسی 5 سال سابقه و تجربه کار داریم، اگر سوال یا مشکلی در سایت وجود دارد با ما در ارتباط باشید.</p>
     </div>
   </div>
-  <header class="website-header">
-      <nav>
-        <ul>
-          <li><a href="./index.html">خانه</a></li>
-          <li><a href="./about.html">درباره</a></li>
-          <li><a href="#services">سرویس ها</a></li>
-          <li><a href="#machines">آزمایشگاه ها</a></li>
-          <li><a href="./login/login.html">ورود</a></li>
-          <li><a href="#contact">ارتباط</a></li>
-          <hr>
-          <li onclick="redirect('../EN/index.html')" class="ChangeLang">EN</li>
-        </ul>
-      </nav>
-  </header>
-  
+
+  <?php
+    include "../../html/fa/header.html"
+  ?>
 
   <!-- Cards -->
   <div class="section">
@@ -44,17 +33,9 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
-    <img src="../../assets/images/Logo.ico" width="40px">
-    <p>© 2025 CyberTech. All rights reserved.</p>
-    <p>Developed by CyberTech Team</p>
-    <ul class="footer-links">
-      <li><a href="./index.html">خانه</a></li>
-      <li><a href="./about.html">درباره</a></li>
-      <li><a href="#contact">ارتباط با ما</a></li>
-      <li><a href="#services">سرویس ها</a></li>
-    </ul>
-  </footer>
+  <?php
+    include "../../html/fa/footer.html"
+  ?>
 
   <script>
     document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";

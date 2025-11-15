@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../../css/login.css">
-    <title>ورود</title>
-    <link rel="shortcut icon" href="../../../assets/images/Logo.ico"/>
+    <link rel="stylesheet" href="../../css/register.css">
+    <title>ثبت نام</title>
+    <link rel="shortcut icon" href="../../assets/images/Logo.ico"/>
+    <script src="../../js/functions.js"></script>
     <style>
         .image-wrapper {
             position: fixed;
@@ -29,11 +30,10 @@
             transform: scale(1.05);
         }
     </style>
-    <script src="../../../js/functions.js"></script>
 </head>
 <body>
     <div class="image-wrapper">
-        <img src="../../../assets/images/image4.jpg" alt="login-background">
+        <img src="../../assets/images/image4.jpg" alt="register">
     </div>
 
     <div class="card">
@@ -41,24 +41,23 @@
         <form class="form">
             <input type="email" placeholder="ایمیل" class="input">
             <input type="password" placeholder="رمز عبور" class="input">
+            <input type="password" placeholder="تایید رمز عبور" class="input">
+            <input type="text" placeholder="نام کاربری" class="input">
         </form>
-        <button class="login-button">ورود</button>                             
+        <button class="register-button">ثبت نام</button>                             
         
+        <p class="signup">
+            حساب کاربری دارید؟
+            <span class="signup-page" onclick="redirect('./login.html')">ورود</span>
+        </p>
         <p class="home">
             برگشت به
-            <span class="home-page" onclick="redirect('../index.html')">خانه</span>
-        </p>
-        <p class="signup">
-            حساب کاربری ندارید؟  
-            <span class="signup-page" onclick="redirect('./register.html')">ثبت نام</span>
-        </p>
-        <p class="forgot">
-            <span class="forgot-page" onclick="redirect('./forget.html')">فراموشی رمز عبور</span>
+            <span class="home-page" onclick="redirect('../../php/fa/index.php')">خانه</span>
         </p>
     </div>
     <script>
         document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
-        document.getElementsByClassName("login-button")[0].style = "margin-top: 10%;";
+        document.getElementsByClassName("register-button")[0].style = "margin-top: 5%;";
     </script>
 </body>
 </html>

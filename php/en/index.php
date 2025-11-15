@@ -19,21 +19,10 @@
       <p>This website is built to introduce tools and fields within cybersecurity and penetration testing<br> It also includes a lab environment for practicing ethical hacking and security hardening</p>
     </div>
   </div>
-  <header class="website-header">
-      <nav>
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#machines">Machines & Labs</a></li>
-          <li><a href="./login/login.html">Login</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <hr>
-          <li onclick="redirect('../FA/index.html')" class="ChangeLang">FA</li>
-        </ul>
-      </nav>
-  </header>
-  
+
+  <?php
+    include "../../html/en/header.html";
+  ?>
 
   <!-- Cards -->
   <div class="section">
@@ -124,16 +113,9 @@
   </div>
   
   <!-- Footer -->
-  <footer class="footer">
-    <img src="../../assets/images/Logo.ico" width="40px">
-    <p>© 2025 CyberTech. All rights reserved.</p>
-    <p>Developed by CyberTech Team</p>
-    <ul class="footer-links">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./about.html">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#services">Services</a></li>
-    </ul>
-  </footer>
+  <?php
+    include "../../html/en/footer.html"
+  ?>
+
 </body>
 </html>

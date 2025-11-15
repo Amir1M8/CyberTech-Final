@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../css/header.css">
   <title>CyberTech</title>
   <link rel="shortcut icon" href="../../assets/images/Logo.ico"/>
-  <script src="../../js/functions.js"></script>
+  <script src="../js/functions.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -19,21 +19,10 @@
       <p>این آکادمی جهت معرفی شاخه های مختلف امنیت سایبری و معرفی ابزار های آن به وجود آمده<br> همچنین این آکادمی در اختیار کاربران ماشین ها و آزمایشگاه های مختلفی برای تست امنیت و تمرین قرار میدهد</p>
     </div>
   </div>
-  <header class="website-header">
-      <nav>
-        <ul>
-          <li><a href="./index.html">خانه</a></li>
-          <li><a href="./about.html">درباره</a></li>
-          <li><a href="#services">سرویس ها</a></li>
-          <li><a href="#machines">آزمایشگاه ها</a></li>
-          <li><a href="./login/login.html">ورود</a></li>
-          <li><a href="#contact">ارتباط</a></li>
-          <hr>
-          <li onclick="redirect('../EN/index.html')" class="ChangeLang">انگلیسی</li>
-        </ul>
-      </nav>
-  </header>
   
+  <?php
+    include "../../html/fa/header.html"
+  ?>
 
   <!-- Cards -->
   <div class="section">
@@ -125,17 +114,9 @@
   
   
   <!-- Footer -->
-  <footer class="footer">
-    <img src="../../assets/images/Logo.ico" width="40px">
-    <p>© 2025 CyberTech. All rights reserved.</p>
-    <p>Developed by CyberTech Team</p>
-    <ul class="footer-links">
-      <li><a href="./index.html">خانه</a></li>
-      <li><a href="./about.html">درباره</a></li>
-      <li><a href="#contact">ارتباط</a></li>
-      <li><a href="#services">سرویس ها</a></li>
-    </ul>
-  </footer>
+  <?php
+    include "../../html/fa/footer.html"
+  ?>
 
   <script>
     document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
