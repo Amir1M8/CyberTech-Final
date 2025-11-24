@@ -176,3 +176,101 @@ nav ul li a:hover {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
   transform: translateY(-2px);
 }
+
+/* Machines in own page */
+
+.title-box {
+    width: 90%;              
+    max-width: 1500px; 
+    margin: 100px auto 50px auto;
+    background: #12140ead; 
+    color: #c0c0c0ff;               
+    padding: 30px;
+    border-radius: 15px;    
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); 
+    backdrop-filter: blur(2px);
+}
+
+.content-box {
+    width: 90%;              
+    max-width: 1500px; 
+    margin: 50px auto 50px auto;
+    background: #12140ead; 
+    color: #c0c0c0ff;               
+    padding: 30px;
+    border-radius: 15px;    
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); 
+    backdrop-filter: blur(2px); 
+}
+
+.machines-table {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    font-size: medium;
+}
+
+.machine-section button {
+    width: 100%;
+    height: 40px;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f0; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.machine-section button:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Laboratories */
+
+.labs-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: ltr; 
+}
+
+.lab-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    min-width: 250px;
+    padding: 20px;
+    background: #30332a52;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #c0c0c0ff;
+}
+
+.lab-card:hover {
+    border-color: #3d3d3d;
+    transform: translateY(-3px);
+}
+
+.challenge-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.challenge-info p {
+    margin: 6px 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.challenge-icon img {
+    width: 100px;
+    height: 100px;
+}
