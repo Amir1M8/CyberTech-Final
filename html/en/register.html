@@ -38,13 +38,13 @@
 
     <div class="card">
         <p id="title" class="title"><b>Welcome to CyberTech</b></p>
-        <form class="form">
-            <input type="email" placeholder="Email" class="input">
-            <input type="password" placeholder="Password" class="input">
-            <input type="password" placeholder="Confirm Password" class="input">
-            <input type="text" placeholder="Username" class="input">
+        <form class="form" action="../../php/database/register.php" method="post">
+            <input type="email" placeholder="Email" class="input" name="email">
+            <input type="password" placeholder="Password" class="input" name="password">
+            <input type="password" placeholder="Confirm Password" class="input" name="confirm_password">
+            <input type="text" placeholder="Username" class="input" name="username">
+            <input class="register-button" type="submit" value="Register">
         </form>
-        <button class="register-button">Register</button>                             
         
         <p class="signup">
             Have an account?

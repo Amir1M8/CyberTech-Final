@@ -44,7 +44,7 @@
 </head>
 <body>
   <?php
-    include "../../html/en/header.html";
+    include "../../html/en/header.php";
   ?>
   <div class="title-box">
     <center><h1>Machines & Laboratories</h1></center>

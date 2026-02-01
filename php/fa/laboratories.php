@@ -48,7 +48,7 @@
 </head>
 <body>
     <?php
-      include "../../html/fa/header.html";
+      include "../../html/fa/header.php";
     ?>
     <div class="content-box">
     <h1>ماشین ها و آزمایشگاه های تست نفوذ</h1>

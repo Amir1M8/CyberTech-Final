@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/alerts.css">
+    <title>CyberTech</title>
+    <link rel="shortcut icon" href="../../assets/images/Logo.ico"/>
+    <style>
+        .image-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;    
+            height: 100vh;   
+            overflow: hidden;
+            z-index: -1;     
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(6px);
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.85);
+            transform: scale(1.05);
+        }
+    </style>
+    <script src="../../js/functions.js"></script>
+</head>
+<body>
+    <div class="image-wrapper">
+        <img src="../../assets/images/image4.jpg" alt="login-background">
+    </div>
+
+    <div class="messages-card">
+        <p id="message" class="message">This Email is Already Exist...</p>
+        <script>
+
+        </script>
+        
+        <p class="home">
+            Back to 
+            <span class="home-page" onclick="redirect('../../php/en/index.php')">Home</span>
+        </p>
+        <p class="signup">
+            Don't have an account?  
+            <span class="signup-page" onclick="redirect('./register.html')">Sign up</span>
+        </p>
+        <p class="forgot">
+            <span class="forgot-page" onclick="redirect('./forget.html')">Forgot Password?</span>
+        </p>
+    </div>
+</body>
+</html>

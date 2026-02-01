@@ -21,7 +21,7 @@
   </div>
   
   <?php
-    include "../../html/fa/header.html"
+    include "../../html/fa/header.php"
   ?>
 
   <!-- Cards -->

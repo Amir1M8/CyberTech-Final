@@ -1,0 +1,135 @@
+@font-face {
+font-family: 'Vazirmatn';
+src: url('../assets/fonts/vaziri-regular.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn';
+}
+
+body {
+    direction: ltr;
+    margin: 0;
+    font-family: Albert Sans;
+    color: #eaeaea;
+}
+
+.image-wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.back-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px) brightness(0.85);
+    transform: scale(1.05);
+}
+
+/* Profile Section */
+
+.profile-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.profile-card {
+    background: #191b159c;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+}
+
+/* Avatar Section */
+
+.profile-avatar {
+    text-align: center;
+    width: 85%;
+    height: 65%;
+}
+
+.profile-avatar img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-avatar h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.profile-avatar span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.profile-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffffc9;
+}
+
+.profile-info p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.info-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.info-list strong {
+    color: #fff;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: rgba(46, 79, 74, 0.15);
+    border: 1px solid #2749386e;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

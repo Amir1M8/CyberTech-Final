@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,13 @@
                 <li><a href="./about.php">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="./laboratories.php">Machines & Labs</a></li>
-                <li><a href="../../html/en/login.html">Login</a></li>
+                <?php 
+                if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
+                    echo("<li><a href='../../php/en/logout.php'>Logout</a></li>");
+                } else {
+                    echo("<li><a href='../../html/en/login.html'>Login</a></li>");
+                }
+                ?>
                 <li><a href="#contact">Contact</a></li>
                 <hr>
                 <li onclick="redirect('../../php/fa/index.php')" class="ChangeLang">FA</li>

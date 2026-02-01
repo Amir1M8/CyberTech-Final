@@ -21,6 +21,19 @@ body {
     backdrop-filter: blur(5px);
 }
 
+.message-card {
+    border-radius: 10px;
+    padding: 20px;
+    height: 80px;
+    width: 400px;   
+    transform-origin: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
 .card {
     border-radius: 10px;
     padding: 20px;
@@ -168,4 +181,20 @@ body {
 .home-page:hover {
     color: rgb(0, 83, 83);
     text-decoration: underline;
+}
+
+.message {
+    border-radius: 10px;
+    padding: 20px;
+    height: 25px;
+    color: #ffffffd8;
+    margin: 0;
+    top: 50%;
+    left: 50%;    
+    background-color: rgba(153, 16, 16, 0.732);
+    font-size: 18px;
+    font-family: Albert Sans;
+    margin: 10px 0 30px 0;
+    text-align: center;
+    font-weight: 500;   
 }

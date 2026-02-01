@@ -36,13 +36,31 @@
         <img src="../../assets/images/image4.jpg" alt="login-background">
     </div>
 
+    <div class="message-card" id="message-card" hidden="true">
+        <p id="message" class="message"></p>
+        <script>
+            if (location.search.replace("?status=","") == "success") {
+                document.getElementById("message-card").hidden = false;
+                document.getElementById("message").innerText = "account registered, login to your account";
+                document.getElementById("message").style = "background-color: rgba(22, 119, 11, 0.732);";
+            } else if (location.search.replace("?status=","") == "exist") {
+                document.getElementById("message-card").hidden = false;
+                document.getElementById("message").innerText = "account is already exist!";
+                document.getElementById("message").style = "background-color: rgba(153, 16, 16, 0.732);";
+            } else if (location.search.replace("?status=","") == "invalid") {
+                document.getElementById("message-card").hidden = false;
+                document.getElementById("message").innerText = "incorrect email or password!";
+                document.getElementById("message").style = "background-color: rgba(153, 16, 16, 0.732);";
+            }
+        </script>
+    </div>
     <div class="card">
         <p id="title" class="title"><b>Welcome to CyberTech</b></p>
-        <form class="form">
-            <input type="email" placeholder="Email" class="input">
-            <input type="password" placeholder="Password" class="input">
+        <form class="form" action="../../php/database/login.php" method="post">
+            <input type="email" placeholder="Email" class="input" name="email">
+            <input type="password" placeholder="Password" class="input" name="password">
+            <input class="login-button" type="submit" value="Login">
         </form>
-        <button class="login-button">Log in</button>                             
         
         <p class="home">
             Back to 

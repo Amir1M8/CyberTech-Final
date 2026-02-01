@@ -21,7 +21,7 @@
   </div>
 
   <?php
-    include "../../html/en/header.html";
+    include "../../html/en/header.php";
   ?>
 
   <!-- Cards -->
