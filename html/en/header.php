@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +12,11 @@ session_start();
                 <li><a href="#services">Services</a></li>
                 <li><a href="./laboratories.php">Machines & Labs</a></li>
                 <?php 
-                if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
+                if (isset($_SESSION['isAdmin'])) {
+                    echo("<li><a href='../../php/en/logout.php'>Logout</a></li>");
+                    echo("<li><a href='../../php/en/admin.php'>Admin</a></li>");
+                }
+                else if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
                     echo("<li><a href='../../php/en/logout.php'>Logout</a></li>");
                 } else {
                     echo("<li><a href='../../html/en/login.html'>Login</a></li>");

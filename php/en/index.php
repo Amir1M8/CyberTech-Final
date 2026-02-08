@@ -21,6 +21,7 @@
   </div>
 
   <?php
+    session_start();
     include "../../html/en/header.php";
   ?>
 

@@ -44,6 +44,7 @@
 </head>
 <body>
   <?php
+    session_start();
     include "../../html/en/header.php";
   ?>
   <div class="title-box">

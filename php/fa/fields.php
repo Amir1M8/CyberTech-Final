@@ -48,6 +48,7 @@
 </head>
 <body>
     <?php
+        session_start();
         include "../../html/fa/header.php";
     ?>
     <div class="content-box">
