@@ -13,6 +13,9 @@ $Login = "false";
 // check data
 while($result){
     if ($email == $result["email"] && $password == $result['password']) {
+        if ($result["user_status"] == "isAdmin") {
+            $_SESSION["isAdmin"] = "True";
+        }
         ?>
             <script>
                 window.location = "../en/profile.php";

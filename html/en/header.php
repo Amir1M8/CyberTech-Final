@@ -13,11 +13,17 @@
                 <li><a href="./laboratories.php">Machines & Labs</a></li>
                 <?php 
                 if (isset($_SESSION['isAdmin'])) {
-                    echo("<li><a href='../../php/en/logout.php'>Logout</a></li>");
-                    echo("<li><a href='../../php/en/admin.php'>Admin</a></li>");
+                    if ($_SESSION['isAdmin'] == "True") {
+                        echo("<li><a href='../../php/en/logout.php'>Logout</a></li>");
+                        echo("<li><a href='../../php/en/admin.php'>Admin</a></li>");
+                        echo("<li><a href='../../php/en/profile.php'>Profile</a></li>");
+                    } else {
+                        echo("<li><a href='../../php/en/logout.php'>Logout</a></li>");
+                    }
                 }
                 else if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
                     echo("<li><a href='../../php/en/logout.php'>Logout</a></li>");
+                    echo("<li><a href='../../php/en/Profile.php'>Profile</a></li>");
                 } else {
                     echo("<li><a href='../../html/en/login.html'>Login</a></li>");
                 }
