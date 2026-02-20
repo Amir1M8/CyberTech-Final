@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    background: #0f110d;
+    color: #fff;
+}
+
+/* Wrapper */
+.image-wrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Container */
+.admin-container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Edit Section */
+.edit-section {
+    background: #191b15df;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.edit-section h2 {
+    margin-bottom: 30px;
+    border-right: 4px solid #393e30df;
+    padding-right: 10px;
+}
+
+/* Form */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #393e30df;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #5c664d;
+    box-shadow: 0 0 8px rgba(92,102,77,0.6);
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.save-btn {
+    background: #393e30df;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    background: #191b15df;
+}
+
+.cancel-btn {
+    background: #5c1f1f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #3b1010;
+}
