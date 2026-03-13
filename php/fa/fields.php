@@ -55,8 +55,8 @@
     <h1>شاخه های مختلف امنیت سایبری</h1>
     </div>
     <script>
-    document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
-    document.getElementsByTagName("ul")[0].style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
-  </script>
+        document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
+        document.getElementsByTagName("ul")[0].style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
+    </script>
 </body>
 </html>

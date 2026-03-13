@@ -127,6 +127,8 @@ if (!isset($_SESSION['isAdmin'])) {
 
     </section>
 </div>
-
+<script>
+    document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
+</script>
 </body>
 </html>
