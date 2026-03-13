@@ -8,6 +8,7 @@ if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
   $cybertech_db = mysqli_connect("localhost", "root", "", "cybertech_db");
   $database_data = mysqli_query($cybertech_db, "SELECT * FROM `users` WHERE email='$email' and password='$password'");
   $result = mysqli_fetch_array($database_data);
+  $id = $result["id"];
 }
 else{
   ?>
@@ -36,9 +37,10 @@ else{
         <div class="profile-card">
 
             <div class="profile-avatar">
-                <img src="../../assets/images/image.jpg" alt="User Avatar">
+                <img src="<?php echo($result["picture"]);?>" alt="User Avatar">
                 <h2><?php echo($result["username"]);?></h2>
-                <span>Security Researcher</span>
+                <br>
+                <button class="edit-profile" onclick="redirect('../database/editor.php?referrer=user&lang=en&id=<?php echo($id);?>')">Edit Profile</button>
             </div>
 
             <div class="profile-info">

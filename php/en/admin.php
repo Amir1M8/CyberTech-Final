@@ -3,7 +3,7 @@ session_start();
 $cybertech_db = mysqli_connect("localhost", "root", "", "cybertech_db");
 
 if (!isset($_SESSION['isAdmin'])) {
-    header("Location: ../../html/en/login.html");
+    header("Location: ../../php/en/profile.php");
     exit();
 }
 ?>
@@ -18,7 +18,7 @@ if (!isset($_SESSION['isAdmin'])) {
     <link rel="stylesheet" href="../../css/admin-panel.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/header.css">
-
+    <link rel="shortcut icon" href="../../assets/images/Logo.ico"/>
     <script>
         function toggleSection(id) {
             const sections = document.querySelectorAll('.admin-section');
@@ -63,7 +63,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$u['email']}</td>
                         <td>{$u['user_status']}</td>
                         <td>
-                            <a href='editor.php?id={$u['id']}&lang=en&referrer=user' style='color: #fff;'>Edit</a> |
+                            <a href='../database/editor.php?id={$u['id']}&lang=en&referrer=user' style='color: #fff;'>Edit</a> |
                             <a href='delete-user.php?id={$u['id']}' style='color: #fff;'>Delete</a>
                         </td>
                     </tr>";
@@ -89,7 +89,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$l['lab_point']}</td>
                         <td>{$l['lab_level']}</td>
                         <td>
-                            <a href='editor.php?id={$l['id']}&lang=en&referrer=lab' style='color: #fff;'>Edit</a> |
+                            <a href='../database/editor.php?id={$l['id']}&lang=en&referrer=lab' style='color: #fff;'>Edit</a> |
                             <a href='delete-lab.php?id={$l['id']}' style='color: #fff;'>Delete</a>
                         </td>
                     </tr>";
@@ -116,7 +116,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$m['fields']}</td>
                         <td>{$m['level']}</td>
                         <td>
-                            <a href='editor.php?id={$m['id']}&lang=en&referrer=machine' style='color: #fff;'>Edit</a> |
+                            <a href='../database/editor.php?id={$m['id']}&lang=en&referrer=machine' style='color: #fff;'>Edit</a> |
                             <a href='delete-machine.php?id={$m['id']}' style='color: #fff;'>Delete</a>
                         </td>
                     </tr>";

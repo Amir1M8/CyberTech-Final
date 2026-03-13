@@ -126,6 +126,20 @@ body {
     font-size: 13px;
 }
 
+.edit-profile {
+    background: #393e30df;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-profile:hover {
+    background: #2f3329df;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .profile-card {
