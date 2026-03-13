@@ -14,11 +14,21 @@ $isExist = "False";
 // check data
 while($result){
     if ($email == $result["email"]) {
+        if ($_POST["lang"] == "en") {
         ?>
             <script>
                 window.location = "../../html/en/login.html?status=exist";
             </script>
         <?php
+        } elseif ($_POST["lang"] == "fa") {
+        ?>
+            <script>
+                window.location = "../../html/fa/login.html?status=exist";
+            </script>
+        <?php
+        } else {
+            echo "<center><h1>404 Error</h1></center>";
+        }
         $isExist = "True";
     }
     $result = mysqli_fetch_array($database_data);
@@ -29,11 +39,21 @@ if ($isExist == "False") {
     if ($confirm_password == $password) {
         $register = mysqli_query($cybertech_db, "INSERT INTO `users`(`username`, `password`, `email`) VALUES ('$username', '$password', '$email')");
         mysqli_close($cybertech_db);
+        if ($_POST["lang"] == "en") {
         ?>
             <script>
                 window.location = "../../html/en/login.html?status=success";
             </script>
         <?php
+        } elseif ($_POST["lang"] == "fa") {
+            ?>
+            <script>
+                window.location = "../../html/fa/login.html?status=success";
+            </script>
+        <?php
+        } else {
+            echo "<center><h1>404 Error</h1></center>";
+        }
     }
 }
 ?>

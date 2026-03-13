@@ -38,13 +38,14 @@
 
     <div class="card">
         <p id="title" class="title"><b>به آکادمی ما خوش آمدید</b></p>
-        <form class="form">
-            <input type="email" placeholder="ایمیل" class="input">
-            <input type="password" placeholder="رمز عبور" class="input">
-            <input type="password" placeholder="تایید رمز عبور" class="input">
-            <input type="text" placeholder="نام کاربری" class="input">
+        <form class="form" action="../../php/database/register.php" method="post">
+            <input type="hidden" name="lang" value="fa">
+            <input type="text" placeholder="نام کاربری" class="input" name="username">
+            <input type="email" placeholder="ایمیل" class="input" name="email">
+            <input type="password" placeholder="رمز عبور" class="input" name="password">
+            <input type="password" placeholder="تایید رمز عبور" class="input" name="confirm_password">
+            <input class="register-button" type="submit" value="ثبت نام">
         </form>
-        <button class="register-button">ثبت نام</button>                             
         
         <p class="signup">
             حساب کاربری دارید؟

@@ -36,13 +36,32 @@
         <img src="../../assets/images/image4.jpg" alt="login-background">
     </div>
 
+    <div class="message-card" id="message-card" hidden="true">
+        <p id="message" class="message"></p>
+        <script>
+            if (location.search.replace("?status=","") == "success") {
+                document.getElementById("message-card").hidden = false;
+                document.getElementById("message").innerText = "حساب کاربر ساخته شد، وارد حساب خود شوید";
+                document.getElementById("message").style = "background-color: rgba(22, 119, 11, 0.732);";
+            } else if (location.search.replace("?status=","") == "exist") {
+                document.getElementById("message-card").hidden = false;
+                document.getElementById("message").innerText = "حساب کاربری قبلا وجود داشته است";
+                document.getElementById("message").style = "background-color: rgba(153, 16, 16, 0.732);";
+            } else if (location.search.replace("?status=","") == "invalid") {
+                document.getElementById("message-card").hidden = false;
+                document.getElementById("message").innerText = "ایمیل یا رمز عبور اشتباه است";
+                document.getElementById("message").style = "background-color: rgba(153, 16, 16, 0.732);";
+            }
+        </script>
+    </div>
     <div class="card">
         <p id="title" class="title"><b>به آکادمی ما خوش آمدید</b></p>
-        <form class="form">
-            <input type="email" placeholder="ایمیل" class="input">
-            <input type="password" placeholder="رمز عبور" class="input">
+        <form class="form" action="../../php/database/login.php" method="post">
+            <input type="hidden" name="lang" value="fa">
+            <input type="email" placeholder="ایمیل" class="input" name="email">
+            <input type="password" placeholder="رمز عبور" class="input" name="password">
+            <input class="login-button" type="submit" value="ورود">
         </form>
-        <button class="login-button">ورود</button>                             
         
         <p class="home">
             برگشت به

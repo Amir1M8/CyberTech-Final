@@ -3,7 +3,7 @@ session_start();
 $cybertech_db = mysqli_connect("localhost", "root", "", "cybertech_db");
 
 if (!isset($_SESSION['isAdmin'])) {
-    header("Location: ../../html/en/login.html");
+    header("Location: ../../php/fa/profile.php");
     exit();
 }
 ?>
@@ -18,7 +18,7 @@ if (!isset($_SESSION['isAdmin'])) {
     <link rel="stylesheet" href="../../css/admin-panel.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/header.css">
-
+    <link rel="shortcut icon" href="../../assets/images/Logo.ico"/>
     <script>
         function toggleSection(id) {
             const sections = document.querySelectorAll('.admin-section');
@@ -32,7 +32,7 @@ if (!isset($_SESSION['isAdmin'])) {
 
 <body>
 
-<?php include "../../html/en/header.php"; ?>
+<?php include "../../html/fa/header.php"; ?>
 
 <div class="image-wrapper">
     <img class="back-image" src="../../assets/images/image2.jpg">
@@ -41,13 +41,13 @@ if (!isset($_SESSION['isAdmin'])) {
 
         <!-- TOGGLE BUTTONS -->
         <div class="admin-menu">
-            <button onclick="toggleSection('users')">مدیریت کاربران</button>
-            <button onclick="toggleSection('labs')">مدیریت آزمایشگاه‌ها</button>
-            <button onclick="toggleSection('machines')">مدیریت ماشین‌ها</button>
+            <button onclick="toggleSection('users')">کاربران</button>
+            <button onclick="toggleSection('labs')">آزمایشگاه ها</button>
+            <button onclick="toggleSection('machines')">ماشین های تست نفوذ</button>
         </div>
 
         <!-- USERS -->
-        <div id="users" class="admin-section">
+        <div id="users" class="admin-section" style="display: block">
             <h2>مدیریت کاربران</h2>
             <table>
                 <tr>
@@ -63,7 +63,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$u['email']}</td>
                         <td>{$u['user_status']}</td>
                         <td>
-                            <a href='edit-user.php?id={$u['id']}' style='color: #fff;'>ویرایش</a> |
+                            <a href='../database/editor.php?id={$u['id']}&lang=fa&referrer=user' style='color: #fff;'>ویرایش</a> |
                             <a href='delete-user.php?id={$u['id']}' style='color: #fff;'>حذف</a>
                         </td>
                     </tr>";
@@ -74,7 +74,7 @@ if (!isset($_SESSION['isAdmin'])) {
 
         <!-- LABS -->
         <div id="labs" class="admin-section">
-            <h2>مدیریت آزمایشگاه‌ها</h2>
+            <h2>مدیریت آزمایشگاه ها</h2>
             <table>
                 <tr>
                     <th>ID</th><th>نام</th><th>امتیاز</th><th>سطح</th><th>عملیات</th>
@@ -89,7 +89,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$l['lab_point']}</td>
                         <td>{$l['lab_level']}</td>
                         <td>
-                            <a href='edit-lab.php?id={$l['id']}' style='color: #fff;'>ویرایش</a> |
+                            <a href='../database/editor.php?id={$l['id']}&lang=fa&referrer=lab' style='color: #fff;'>ویرایش</a> |
                             <a href='delete-lab.php?id={$l['id']}' style='color: #fff;'>حذف</a>
                         </td>
                     </tr>";
@@ -100,10 +100,10 @@ if (!isset($_SESSION['isAdmin'])) {
 
         <!-- MACHINES -->
         <div id="machines" class="admin-section">
-            <h2>مدیریت ماشین‌های پنتست</h2>
+            <h2>مدیریت ماشین های تست نفوذ</h2>
             <table>
                 <tr>
-                    <th>ID</th><th>نام</th><th>توضیح</th><th>دسته‌بندی</th><th>سطح</th><th>عملیات</th>
+                    <th>ID</th><th>نام</th><th>توضیحات</th><th>دسته بندی</th><th>سطح</th><th>عملیات</th>
                 </tr>
                 <?php
                 $machines = mysqli_query($cybertech_db, "SELECT * FROM machines_db");
@@ -116,7 +116,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$m['fields']}</td>
                         <td>{$m['level']}</td>
                         <td>
-                            <a href='edit-machine.php?id={$m['id']}' style='color: #fff;'>ویرایش</a> |
+                            <a href='../database/editor.php?id={$m['id']}&lang=fa&referrer=machine' style='color: #fff;'>ویرایش</a> |
                             <a href='delete-machine.php?id={$m['id']}' style='color: #fff;'>حذف</a>
                         </td>
                     </tr>";

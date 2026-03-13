@@ -10,49 +10,100 @@
     <script src="../../js/functions.js"></script>
     <link rel="shortcut icon" href="../../assets/images/Logo.ico"/>
     <style>
-        body {
-            margin: 0;
-            direction: rtl;
-            padding: 0;
-            position: relative;
-            overflow: hidden;   
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        /* overflow: hidden;    */
+      }
 
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("../../assets/images/image9.jpg");
-            background-size: cover;
-            background-position: center;
-            filter: blur(8px);
-            z-index: -1;
-            transform: scale(1.1);
-        }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../assets/images/image9.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        z-index: -1;
+        transform: scale(1.1);
+      }
 
-        .content-box {
-            width: 90%;              
-            max-width: 1500px; 
-            margin: 120px auto 50px auto;
-            background: #12140ead; 
-            color: white;               
-            padding: 30px;
-            border-radius: 15px;    
-            box-shadow: 0 0 20px rgba(0,0,0,0.5); 
-            backdrop-filter: blur(2px); 
-        }
-  </style>
+      .machine-card {
+        background-color: #30332a52;
+        color: #c0c0c0ff;
+      }
+
+      .machine-card p {
+        color: #c0c0c0ff;
+      }
+    </style>
 </head>
 <body>
-    <?php
-      session_start();
-      include "../../html/fa/header.php";
-    ?>
-    <div class="content-box">
-    <h1>ماشین ها و آزمایشگاه های تست نفوذ</h1>
+  <?php
+    session_start();
+    include "../../html/fa/header.php";
+  ?>
+  <div class="title-box">
+    <center><h1>ماشین ها و آزمایشگاه های تست نفوذ</h1></center>
+  </div>
+  <div class="content-box">
+    <div class="machine-section">
+      <center><h1>ماشین های تست نفوذ</h1></center><hr><br>
+      <div class="machines-table">
+        <!-- Machines Section -->
+        <?php
+        $cybertech_db = mysqli_connect("localhost", "root", "", "cybertech_db");
+        $database_data = mysqli_query($cybertech_db, "SELECT * FROM `machines_db`");
+        $result = mysqli_fetch_array($database_data);
+
+        while($result){
+          ?>
+          <a href="<?php echo $result["url"];?>" class="machine-card">
+            <img src="<?php echo $result["image"];?>">
+            <h3><?php echo $result["machine_name"];?></h3>
+            <hr>
+            <p style="text-align: justify;"><b>توضیحات:</b> <?php echo $result["description"];?></p>
+            <p style="text-align: right;"><b>حوزه</b>: <?php echo $result["fields"];?></p>
+            <p style="text-align: right;"><b>سطح</b>: <?php echo $result["level"];?></p>
+          </a>
+          <?php
+          $result = mysqli_fetch_array($database_data);
+        }
+        mysqli_close($cybertech_db)
+        ?>
+      </div>
+    </div>
+
+    <div class="laboratories">
+      <br><hr><br>
+      <center><h1>آزمایشگاه ها</h1></center><br>
+      <div class="labs-section">
+      <?php
+        $cybertech_db = mysqli_connect("localhost", "root", "", "cybertech_db");
+        $database_data = mysqli_query($cybertech_db, "SELECT * FROM `laboratories_table`");
+        $labs = mysqli_fetch_array($database_data);
+
+        while($labs){
+          ?>
+          <div class="lab-card" style="direction: rtl;">
+            <div class="challenge-info">
+              <h3><?php echo $labs["lab_name"];?></h3>
+              <p style="direction: rtl;">امتیاز: <?php echo $labs["lab_point"];?><br>سطح: <?php echo $labs["lab_level"];?></p>
+            </div>
+            <div class="challenge-icon">
+              <img src="<?php echo $labs["image"];?>" alt="icon">
+            </div>
+          </div>
+          <?php
+          $labs = mysqli_fetch_array($database_data);
+        }
+      ?>
+      </div>
+    </div>
   </div>
   <script>
     document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";

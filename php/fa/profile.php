@@ -13,14 +13,14 @@ if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
 else{
   ?>
   <script>
-    window.location = "../../html/en/login.html"
+    window.location = "../../html/fa/login.html"
   </script>
   <?php
 }
 ?>
 
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,28 +40,27 @@ else{
                 <img src="<?php echo($result["picture"]);?>" alt="User Avatar">
                 <h2><?php echo($result["username"]);?></h2>
                 <br>
-                <button class="edit-profile" onclick="redirect('../database/editor.php?referrer=user&lang=en&id=<?php echo($id);?>')">Edit Profile</button>
+                <button class="edit-profile" onclick="redirect('../database/editor.php?referrer=user&lang=fa&id=<?php echo($id);?>')">ویرایش پروفایل</button>
             </div>
 
             <div class="profile-info">
-                <h3>Information</h3>
+                <h3>اطلاعات</h3>
                 <p>
                   <?php echo($result["description"]);?>
                 </p>
 
                 <ul class="info-list">
-                    <li><strong>Email:</strong> <?php echo($result["email"]);?></li>
-                    <li><strong>Username:</strong> <?php echo($result["username"]);?></li>
-                    <li><strong>Level:</strong> Unknown</li>
+                    <li><strong>ایمیل:</strong> <?php echo($result["email"]);?></li>
+                    <li><strong>نام کاربری:</strong> <?php echo($result["username"]);?></li>
+                    <li><strong>سطح:</strong> نامشخص</li>
                 </ul>
 
-                <h3>Skills</h3>
+                <h3>مهارت ها</h3>
                 <div class="skills">
-                    <div class="skill">Penetration Testing</div>
-                    <div class="skill">Linux</div>
-                    <div class="skill">Networking</div>
-                    <div class="skill">Web Security</div>
-                    <div class="skill">CTF</div>
+                    <div class="skill">تست نفوذ</div>
+                    <div class="skill">لینوکس</div>
+                    <div class="skill">شبکه</div>
+                    <div class="skill">امنیت وب</div>
                 </div>
             </div>
 
@@ -69,7 +68,10 @@ else{
     </section>
   </div>
   <?php
-    include "../../html/en/header.php";
+    include "../../html/fa/header.php";
   ?>
+  <script>
+    document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
+  </script>
 </body>
 </html>

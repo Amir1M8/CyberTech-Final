@@ -16,11 +16,21 @@ while($result){
         if ($result["user_status"] == "isAdmin") {
             $_SESSION["isAdmin"] = "True";
         }
+        if ($_POST["lang"] == "en") {
         ?>
             <script>
                 window.location = "../en/profile.php";
             </script>
         <?php
+        } elseif ($_POST["lang"] == "fa") {
+        ?>
+            <script>
+                window.location = "../fa/profile.php";
+            </script>
+        <?php
+        } else {
+            echo "<center><h1>404 Error</h1></center>";
+        }
         $Login = "true";
         $_SESSION["email"] = $email;
         $_SESSION["password"] = $password;
@@ -29,10 +39,20 @@ while($result){
 }
 
 if ($Login == "false") {
+    if ($_POST["lang"] == "en") {
     ?>
         <script>
             window.location = "../../html/en/login.html?status=invalid";
         </script>
     <?php
+    } elseif ($_POST["lang"] == "fa") {
+    ?>
+        <script>
+            window.location = "../../html/fa/login.html?status=invalid";
+        </script>
+    <?php
+    } else {
+        echo "<center><h1>404 Error</h1></center>";
+    }
 }
 ?>

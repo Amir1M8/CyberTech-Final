@@ -9,7 +9,7 @@ if (!isset($_SESSION['isAdmin'])) {
 ?>
 
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <title>Admin Panel - CyberTech</title>
