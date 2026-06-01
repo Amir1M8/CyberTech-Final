@@ -28,6 +28,53 @@ if (!isset($_SESSION['isAdmin'])) {
             target.style.display = 'block';
         }
     </script>
+    <style>
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .confirm-box {
+        background-color: #212a21;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .confirm-box p {
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+    
+    .buttons button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    
+    #confirmBtn {
+        background-color: #133e14;
+        color: white;
+    }
+    
+    #cancelBtn {
+        background-color: #60150f;
+        color: white;
+    }
+    
+    </style>
 </head>
 
 <body>
@@ -64,7 +111,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$u['user_status']}</td>
                         <td>
                             <a href='../database/editor.php?id={$u['id']}&lang=fa&referrer=user' style='color: #fff;'>ویرایش</a> |
-                            <a href='delete-user.php?id={$u['id']}' style='color: #fff;'>حذف</a>
+                            <span style='cursor: pointer;color: #fff;' onclick='showCustomConfirm(\"fa\", \"user\", {$u['id']})'><u>حذف</span>
                         </td>
                     </tr>";
                 }
@@ -90,7 +137,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$l['lab_level']}</td>
                         <td>
                             <a href='../database/editor.php?id={$l['id']}&lang=fa&referrer=lab' style='color: #fff;'>ویرایش</a> |
-                            <a href='delete-lab.php?id={$l['id']}' style='color: #fff;'>حذف</a>
+                            <span style='cursor: pointer;color: #fff;' onclick='showCustomConfirm(\"fa\", \"lab\", {$l['id']})'><u>حذف</span>
                         </td>
                     </tr>";
                 }
@@ -117,7 +164,7 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$m['level']}</td>
                         <td>
                             <a href='../database/editor.php?id={$m['id']}&lang=fa&referrer=machine' style='color: #fff;'>ویرایش</a> |
-                            <a href='delete-machine.php?id={$m['id']}' style='color: #fff;'>حذف</a>
+                            <span style='cursor: pointer;color: #fff;' onclick='showCustomConfirm(\"fa\", \"machine\", {$m['id']})'><u>حذف</span>
                         </td>
                     </tr>";
                 }
@@ -127,6 +174,16 @@ if (!isset($_SESSION['isAdmin'])) {
 
     </section>
 </div>
+<div id="customConfirmOverlay" class="overlay" style="display:none;">
+    <div class="confirm-box">
+        <p id="confirmMessage">پیغام شما</p>
+        <div class="buttons">
+        <button id="confirmBtn">تایید</button>
+        <button id="cancelBtn">لغو</button>
+        </div>
+    </div>
+</div>
+<script src="../../js/alert.js"></script>
 <script>
     document.body.style = "direction: rtl;margin: 0;font-family: 'Vazirmatn', sans-serif;";
 </script>

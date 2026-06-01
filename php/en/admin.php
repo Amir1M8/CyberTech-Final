@@ -28,6 +28,65 @@ if (!isset($_SESSION['isAdmin'])) {
             target.style.display = 'block';
         }
     </script>
+    <style>
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .confirm-box {
+        background-color: #212a21;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .confirm-box p {
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+    
+    .buttons button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    
+    #confirmBtn {
+        background-color: #133e14;
+        color: white;
+    }
+    
+    #cancelBtn {
+        background-color: #60150f;
+        color: white;
+    }
+    .create-btn {
+        background: #393e30df;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .create-btn:hover {
+        background: #2f3329df;
+    }
+    </style>
 </head>
 
 <body>
@@ -64,12 +123,13 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$u['user_status']}</td>
                         <td>
                             <a href='../database/editor.php?id={$u['id']}&lang=en&referrer=user' style='color: #fff;'>Edit</a> |
-                            <a href='delete-user.php?id={$u['id']}' style='color: #fff;'>Delete</a>
+                            <span style='cursor: pointer;color: #fff;' onclick='showCustomConfirm(\"en\", \"user\", {$u['id']})'><u>Delete</span>
                         </td>
                     </tr>";
                 }
                 ?>
-            </table>
+            </table><br>
+            <button class="create-btn">Create New User</button>
         </div>
 
         <!-- LABS -->
@@ -90,12 +150,13 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$l['lab_level']}</td>
                         <td>
                             <a href='../database/editor.php?id={$l['id']}&lang=en&referrer=lab' style='color: #fff;'>Edit</a> |
-                            <a href='delete-lab.php?id={$l['id']}' style='color: #fff;'>Delete</a>
+                            <span style='cursor: pointer;color: #fff;' onclick='showCustomConfirm(\"en\", \"lab\", {$l['id']})'><u>Delete</span>
                         </td>
                     </tr>";
                 }
                 ?>
-            </table>
+            </table><br>
+            <button class="create-btn">Create New Laboratory</button>
         </div>
 
         <!-- MACHINES -->
@@ -117,16 +178,28 @@ if (!isset($_SESSION['isAdmin'])) {
                         <td>{$m['level']}</td>
                         <td>
                             <a href='../database/editor.php?id={$m['id']}&lang=en&referrer=machine' style='color: #fff;'>Edit</a> |
-                            <a href='delete-machine.php?id={$m['id']}' style='color: #fff;'>Delete</a>
+                            <span style='cursor: pointer;color: #fff;' onclick='showCustomConfirm(\"en\", \"machine\", {$m['id']})'><u>Delete</span>
                         </td>
                     </tr>";
                 }
                 ?>
-            </table>
+            </table><br>
+            <button class="create-btn">Create New Machine</button>
         </div>
 
     </section>
 </div>
-
+<div id="customConfirmOverlay" class="overlay" style="display:none;">
+    <div class="confirm-box">
+        <p id="confirmMessage">پیغام شما</p>
+        <div class="buttons">
+        <button id="confirmBtn">تایید</button>
+        <button id="cancelBtn">لغو</button>
+        </div>
+    </div>
+</div>
+<script src="../../js/alert.js"></script>
 </body>
 </html>
+
+<!-- href='delete-user.php?id={$u['id']}' -->
